@@ -58,7 +58,7 @@ const {test, expect} = require('@playwright/test')
 //in playwright.config.js below the use: block (before projects: block) we can set the 'timeout' specifically there
 test('test7', async({page})=>{
     //test.slow() //triples the timeout set in playwright.config.js, default 30s
-    test.setTimeout(5000) //can also manually set this specific test's timeout
+    test.setTimeout(2000) //can also manually set this specific test's timeout
     await page.goto('https://www.demoblaze.com/index.html')
     console.log('this is test7')
 })
