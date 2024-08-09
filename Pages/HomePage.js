@@ -2,21 +2,20 @@ exports.HomePage = class HomePage{
 
     constructor(page){
         this.page = page
-        this.productList = "#//*[@id='tbodyid']/div/div/div/h4/a"
-        this.addToCartBtn = '.btn.btn-success.btn-lg'
+        //this.productList = "//div[@id='tbodyid']/div/div/div/h4/a"
+        this.productList = "//div[@id='tbodyid']/div/div/div/h4"
+        this.addToCartBtn = "//a[normalize-space()='Add to cart']"
         this.cart='#cartur'
 
     }
 
     async addProductToCart(productName){
-        //grab all the products into an array $$
-        const productList = await this.page.$$(this.productList)
 
-        //loop through the array to check each item
-        for (const product of productList){
-            //if this nth item is a match, click onto it and break loop
-            if (productName === await product.textContent()){
-                await product.click()
+        const productList = await this.page.$$(this.productList);
+
+        for (const product of productList) {
+            if ( productName === await product.textContent() ) {
+                await product.click();
                 break
             }
         }
