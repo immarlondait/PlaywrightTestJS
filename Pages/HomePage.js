@@ -16,6 +16,7 @@ exports.HomePage = class HomePage{
         for (const product of productList) {
             if ( productName === await product.textContent() ) {
                 await product.click();  // This is where we're having our problem
+                                        // says Element is not attached to the DOM
                 break
             }
         }
