@@ -15,10 +15,11 @@ exports.HomePage = class HomePage{
 
         for (const product of productList) {
             if ( productName === await product.textContent() ) {
-                await product.click();
+                await product.click();  // This is where we're having our problem
                 break
             }
         }
+
 
         //we are now in the cart page, clicking on Add to Cart brings up a dialog popup
         //in order to handle a dialog popup, we have to pre-build below dialog handler
