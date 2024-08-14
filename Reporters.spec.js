@@ -19,4 +19,4 @@ test('Test3', async ({page}) => {
 // changed config reporters from 'html' to 'list'
 // or manually via terminal
 //                    --reporter=list
-// line, list, dot, html, json, junit, github
+// line, list, dot, html, json, junit
