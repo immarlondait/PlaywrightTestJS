@@ -46,7 +46,7 @@ test('Update user', async ({request}) => {
                                     {
                                         data: {
                                             "name": "kumar",
-                                            "job": "engineer"
+                                            "job": "teacher"
                                         },
 
                                         headers: {
